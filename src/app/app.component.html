@@ -1,1 +1,24 @@
+<div class="container">
+  <app-game-control
+    (evenGenerated)="onEvenGenerated($event)"
+    (oddGenerated)="onOddGenerated($event)"
+  ></app-game-control>
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-4">
+      <app-even
+        *ngFor="let evenNumber of gameEvenNumbers"
+      >{{evenNumber}}
+      </app-even>
+    </div>
+    <div class="col-sm-2"></div>
+    <div class="col-sm-4">
+      <app-odd
+        *ngFor="let oddNumber of gameOddNumbers"
+      >
+        {{oddNumber}}
+      </app-odd>
+    </div>
+  </div>
+</div>
 
